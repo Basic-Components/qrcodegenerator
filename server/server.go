@@ -12,7 +12,6 @@ import (
 	grpc "google.golang.org/grpc"
 	logrus "github.com/sirupsen/logrus"
 )
-
 type rpcserver struct {
 }
 

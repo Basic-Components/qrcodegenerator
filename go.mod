@@ -3,7 +3,7 @@ module github.com/Basic-Components/qrcodegenerator
 go 1.12
 
 require (
-	github.com/Basic-Components/jwtrpc v1.0.1 // indirect
+	github.com/Basic-Components/qrcodegenerator v1.0.1 // indirect
 	github.com/boombuler/barcode v1.0.0
 	github.com/golang/protobuf v1.3.1
 	github.com/sirupsen/logrus v1.4.2
