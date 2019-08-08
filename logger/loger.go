@@ -16,5 +16,5 @@ var Logger = Init()
 
 //Log 有默认字段的log
 var Log = Logger.WithFields(logrus.Fields{
-	"app-type": "jwt-signer",
+	"app-type": "qrcode-generator",
 })

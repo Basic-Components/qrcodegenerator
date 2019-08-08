@@ -22,7 +22,7 @@ if ($args.Count -eq 0){
  
 if (!(Test-Path $ASSETS)) {
     mkdir $ASSETS
-    protoc -I schema schema/jwtrpcdeclare.proto --go_out=plugins=grpc:jwtrpcdeclare
+    protoc -I schema schema/qrcodegeneratordeclare.proto --go_out=plugins=grpc:qrcodegeneratordeclare
 } 
 
 if ($cmd -eq "all"){

@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/Basic-Components/jwtrpc/logger"
+	"github.com/Basic-Components/qrcodegenerator/logger"
 
 	"github.com/spf13/viper"
 )
@@ -18,10 +18,6 @@ func SetFileConfig(ConfigViper *viper.Viper, fileName string, filePaths []string
 		logger.Logger.Info("config file not found: %s \n", err)
 	} else {
 		ConfigViper.Set("Address", FileConfigViper.Get("Address"))
-		ConfigViper.Set("PrivateKeyPath", FileConfigViper.Get("PrivateKeyPath"))
-		ConfigViper.Set("PublicKeyPath", FileConfigViper.Get("PublicKeyPath"))
-		ConfigViper.Set("SignMethod", FileConfigViper.Get("SignMethod"))
-		ConfigViper.Set("Iss", FileConfigViper.Get("Iss"))
 	}
 }
 

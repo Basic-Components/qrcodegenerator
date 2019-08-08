@@ -44,7 +44,7 @@ fi
 
 if ! test -d $ASSETS; then
     mkdir $ASSETS
-    protoc -I schema schema/jwtrpcdeclare.proto --go_out=plugins=grpc:jwtrpcdeclare
+    protoc -I schema schema/qrcodegeneratordeclare.proto --go_out=plugins=grpc:qrcodegeneratordeclare
 fi
 
 case $cmd in

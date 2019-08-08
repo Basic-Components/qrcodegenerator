@@ -1,7 +1,7 @@
 package config
 
 import (
-	logger "github.com/Basic-Components/jwtrpc/logger"
+	logger "github.com/Basic-Components/qrcodegenerator/logger"
 
 	"github.com/xeipuuv/gojsonschema"
 )
@@ -15,22 +15,6 @@ const schema = `{
 		"Address": {
 			"type": "string",
 			"description": "the host and port"
-		},
-		"PrivateKeyPath": {
-			"type": "string",
-			"description": "PrivateKey's Path"
-		},
-		"PublicKeyPath": {
-			"type": "string",
-			"description": "PublicKey's Path"
-		},
-		"SignMethod": {
-			"type": "string",
-			"description": "Sign jwt's Method"
-		},
-		"Iss": {
-			"type": "string",
-			"description": "Signer's name"
 		}
 	}
 }`

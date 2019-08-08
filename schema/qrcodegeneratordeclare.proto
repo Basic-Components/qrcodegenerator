@@ -1,0 +1,26 @@
+syntax = "proto3";
+package qrcodegeneratordeclare;
+
+service QrService {
+    rpc Encode (Request) returns (Response){}
+}
+
+message Request {
+    string data = 1;
+}
+
+
+message StatusData {
+    enum Status {
+      SUCCEED = 0;
+      ERROR = 1;
+    }
+    Status status =1;
+    string msg=2;
+}
+  
+
+message Response {
+    StatusData status = 1;
+    string data = 2;
+}

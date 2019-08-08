@@ -4,7 +4,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/Basic-Components/jwtrpc/logger"
+	"github.com/Basic-Components/qrcodegenerator/logger"
 
 	logrus "github.com/sirupsen/logrus"
 	"github.com/small-tk/pathlib"
@@ -14,14 +14,9 @@ import (
 
 // InitFlagConfig 初始化命令行传入的参数到配置,返回值为false表示要执行创建秘钥否则为启动服务
 func InitFlagConfig(ConfigViper *viper.Viper) bool {
-	genkey := pflag.BoolP("genkey", "g", false, "创建rsa公私钥对")
 	loglevel := pflag.StringP("loglevel", "l", "WARN", "创建rsa公私钥对")
 	confPath := pflag.StringP("config", "c", "", "配置文件位置")
 	address := pflag.StringP("address", "a", "", "要启动的服务器地址")
-	privateKeyPath := pflag.StringP("private_key_path", "r", "", "私钥位置")
-	publicKeyPath := pflag.StringP("public_key_path", "u", "", "公钥位置")
-	signMethod := pflag.StringP("sign_method", "m", "", "签名方法")
-	iss := pflag.StringP("iss", "i", "", "签名者")
 	pflag.Parse()
 	switch {
 	case strings.ToUpper(*loglevel) == "TRACE":
@@ -60,18 +55,6 @@ func InitFlagConfig(ConfigViper *viper.Viper) bool {
 	}
 	if *address != "" {
 		ConfigViper.Set("Address", *address)
-	}
-	if *privateKeyPath != "" {
-		ConfigViper.Set("PrivateKeyPath", *privateKeyPath)
-	}
-	if *publicKeyPath != "" {
-		ConfigViper.Set("PublicKeyPath", *publicKeyPath)
-	}
-	if *signMethod != "" {
-		ConfigViper.Set("SignMethod", *signMethod)
-	}
-	if *iss != "" {
-		ConfigViper.Set("Iss", *iss)
 	}
 	return true
 
