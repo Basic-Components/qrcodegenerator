@@ -2,7 +2,6 @@ package main
 
 import (
 	context "context"
-	"encoding/json"
 	config "github.com/Basic-Components/qrcodegenerator/config"
 	pb "github.com/Basic-Components/qrcodegenerator/qrcodegeneratordeclare"
 	"github.com/Basic-Components/qrcodegenerator/generator"

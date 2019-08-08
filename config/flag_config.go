@@ -30,9 +30,6 @@ func InitFlagConfig(ConfigViper *viper.Viper) bool {
 	case strings.ToUpper(*loglevel) == "Error":
 		logger.Logger.SetLevel(logrus.ErrorLevel)
 	}
-	if *genkey {
-		return false
-	}
 	if *confPath != "" {
 		p, err := pathlib.New(*confPath).Absolute()
 		if err != nil {

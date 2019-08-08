@@ -9,7 +9,7 @@ import (
 const schema = `{
 	"description": "jwt grpc server config",
 	"type": "object",
-	"required": [ "Address","SignMethod","PrivateKeyPath","PublicKeyPath","Iss"],
+	"required": [ "Address"],
 	"additionalProperties": false,
 	"properties": {
 		"Address": {
